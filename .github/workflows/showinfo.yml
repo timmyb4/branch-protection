@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout reposetory in runner
-      uses: action/checkout@v3
+      uses: actions/checkout@v3
 
     - name: Print operating system
       run: echo "The runner is running $RUNNER_OS."
