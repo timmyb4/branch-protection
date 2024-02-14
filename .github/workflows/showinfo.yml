@@ -1,0 +1,22 @@
+name: My WorkFlow
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [ "dev" ]
+
+jobs:
+  show-info:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout reposetory in runner
+      uses: action/checkout@v3
+
+    - name: Print operating system
+      run: echo "The runner is running $RUNNER_OS."
+
+    - name: List SDKS and runtimes
+      run:
+        dotnet --list-sdks
+        dotnet --list-runtimes
