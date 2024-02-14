@@ -17,6 +17,6 @@ jobs:
       run: echo "The runner is running $RUNNER_OS."
 
     - name: List SDKS and runtimes
-      run:
+      run: |
         dotnet --list-sdks
         dotnet --list-runtimes
